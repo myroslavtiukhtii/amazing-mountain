@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <title>Amazing Mountain</title>
 </head>
@@ -15,7 +16,11 @@
     <header>
         <h2 class="visually-hidden">Weather</h2>
         <div class="container">
-            <nav>
+            <div class="nav-container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+            </div>
                 <h2 class="visually-hidden">Navigation</h2>
                 <div class="logo">
                     <a href="#">
@@ -25,16 +30,19 @@
                         </svg>
                     </a>
                 </div>
-                <ul class="menu">
-                    <li><a href="#">Ski</a></li>
-                    <li><a href="#">Golf</a></li>
-                    <li><a href="#">Hiking</a></li>
-                    <li class="end"><a href="#">Contact</a></li>
-                </ul>
+                <nav class="topnav" id="myTopnav">
+                    <ul class="menu">
+                        <li class="active"><a href="#">Ski</a></li>
+                        <li><a href="#">Golf</a></li>
+                        <li><a href="#">Hiking</a></li>
+                        <li class="end"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="empty"></div>
                 <div class="weather">
                         <div class="icon-weather">
                             <span class="visually-hidden">weather logo</span>
-                            <svg class="icon">
+                            <svg class="icon-weather">
                                 <use xlink:href="img/sprite.svg#weather"></use>
                             </svg>
                         </div>
@@ -69,5 +77,19 @@
             </div>
         </section>
     </main>
+    <script>
+        const hamburger = document.querySelector('.nav-container');
+        const menu = document.querySelector('.topnav');
+        hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+        })
+    </script>
+
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+    </script>
 </body>
 </html>

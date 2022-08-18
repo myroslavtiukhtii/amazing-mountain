@@ -1,23 +1,30 @@
 header {
-    position: relative;
     padding-top: 0;
     padding-bottom: 0;
+    position: relative;
 
     .container {
-
-        nav {
             min-height: 83px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
 
+        .topnav {
+
+            display: block;
+            
             .menu {
                 display: flex;
                 align-items: center;
+                flex-direction: row;
+                align-items: center;
+                padding-top: 0;
 
                 li {
                     margin-right: 60px;
+                    font-size: 14px;
+                    margin-bottom: 0;
                 }
 
                 .end {
@@ -27,13 +34,18 @@ header {
         }
     }
 
-
+    .nav-container {
+        display: none;
+    }
 
     .icon {
         max-width: 178px;
         max-height: 20px;
     }
 
+    .empty {
+        width: 150px;
+    }
 
     .weather {
         position: absolute;
@@ -46,12 +58,6 @@ header {
             max-width: 75px;
             max-height: 83px;
             background-color: $colorRed;
-            padding: 24px 11px;
-
-            .icon {
-                width: 51px;
-                height: 33px;
-            }
         }
         
         .weather-list {
@@ -73,7 +79,6 @@ header {
                 color: #ffffffb3;
                 margin-bottom: 20px;
             }
-
 
             .celcius::after {
                 content: ' -6°C';
@@ -98,9 +103,6 @@ header {
                 line-height: 16px;
                 color: #FFFFFF;
             }
-        }
-        
+        }  
     }
-
-
 }

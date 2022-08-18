@@ -81,22 +81,6 @@ header {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-header .container nav .menu {
-  display: none;
-}
-header .container nav .menu li {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #0C0E36;
-}
-header .container nav .menu li a {
-  text-decoration: none;
-  color: #0C0E36;
-}
 header .icon {
   max-width: 150px;
   max-height: 25px;
@@ -105,15 +89,17 @@ header .weather {
   display: flex;
   flex-direction: row;
 }
-header .weather .icon-weather {
-  max-width: 75px;
-  min-height: 83px;
-  background-color: #F70058;
-  padding: 24px 11px;
-}
-header .weather .icon-weather .icon {
+header .weather .icon-weather svg {
   width: 51px;
   height: 33px;
+}
+header .weather .icon-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  min-height: 83px;
+  background-color: #F70058;
 }
 header .weather .weather-list {
   display: flex;
@@ -123,6 +109,7 @@ header .weather .weather-list {
   padding-top: 19px;
   padding-right: 13px;
   padding-left: 9px;
+  padding: 5px;
 }
 header .weather .weather-list span {
   font-family: "Roboto";
@@ -202,6 +189,10 @@ header .weather .weather-list .snowfall::after {
   padding: 5px;
   cursor: pointer;
 }
+.hero .buttons .pass:hover {
+  background-color: rgb(4, 12, 12);
+  transition: all 0.3s ease-in;
+}
 .hero .buttons .tickets {
   max-width: 167px;
   min-height: 49px;
@@ -217,6 +208,63 @@ header .weather .weather-list .snowfall::after {
   border: 5px solid #F70058;
   cursor: pointer;
 }
+.hero .buttons .tickets:hover {
+  background-color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+header .container nav .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+}
+header .container nav .menu li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #0C0E36;
+  margin-bottom: 25px;
+}
+header .container nav .menu li a {
+  text-decoration: none;
+  color: #0C0E36;
+}
+header .container .topnav {
+  display: none;
+}
+header .container .topnav.active {
+  display: block;
+  min-height: 100vh;
+}
+header .container .nav-container {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+header .container .bar1, header .container .bar2, header .container .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+header .container .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+header .container .change .bar2 {
+  opacity: 0;
+}
+header .container .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 
 @media only screen and (min-width: 996px) {
   .container {
@@ -225,30 +273,44 @@ header .weather .weather-list .snowfall::after {
     padding: 0 15px;
   }
   header {
-    position: relative;
     padding-top: 0;
     padding-bottom: 0;
+    position: relative;
   }
-  header .container nav {
+  header .container {
     min-height: 83px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  header .container nav .menu {
+  header .container .topnav {
+    display: block;
+  }
+  header .container .topnav .menu {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
   }
-  header .container nav .menu li {
+  header .container .topnav .menu li {
     margin-right: 60px;
+    font-size: 14px;
+    margin-bottom: 0;
   }
-  header .container nav .menu .end {
+  header .container .topnav .menu .end {
     margin-right: 0;
+  }
+  header .nav-container {
+    display: none;
   }
   header .icon {
     max-width: 178px;
     max-height: 20px;
+  }
+  header .empty {
+    width: 150px;
   }
   header .weather {
     position: absolute;
@@ -261,11 +323,6 @@ header .weather .weather-list .snowfall::after {
     max-width: 75px;
     max-height: 83px;
     background-color: #F70058;
-    padding: 24px 11px;
-  }
-  header .weather .icon-weather .icon {
-    width: 51px;
-    height: 33px;
   }
   header .weather .weather-list {
     display: flex;

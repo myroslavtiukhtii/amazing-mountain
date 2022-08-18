@@ -93,6 +93,10 @@ header .container nav .menu li {
   text-transform: uppercase;
   color: #0C0E36;
 }
+header .container nav .menu li a {
+  text-decoration: none;
+  color: #0C0E36;
+}
 header .icon {
   max-width: 150px;
   max-height: 25px;
@@ -196,6 +200,7 @@ header .weather .weather-list .snowfall::after {
   border: 0;
   margin-bottom: 15px;
   padding: 5px;
+  cursor: pointer;
 }
 .hero .buttons .tickets {
   max-width: 167px;
@@ -210,6 +215,7 @@ header .weather .weather-list .snowfall::after {
   text-transform: uppercase;
   color: #F70058;
   border: 5px solid #F70058;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 996px) {

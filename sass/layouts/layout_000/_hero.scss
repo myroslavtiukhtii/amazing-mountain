@@ -49,6 +49,7 @@
             border: 0;
             margin-bottom: 15px;
             padding: 5px;
+            cursor: pointer;
         }
 
         .tickets {
@@ -63,11 +64,11 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: $colorRed;
-            border: 5px solid $colorRed; 
+            border: 5px solid $colorRed;
+            cursor: pointer; 
         }
 
 
     }
-
 
 }

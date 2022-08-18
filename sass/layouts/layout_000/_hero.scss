@@ -1,0 +1,73 @@
+.hero {
+    min-height: 100vh;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding-top: 25px;
+
+    .slogans {
+
+        h2 {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 38px;
+            color: #0C0E36;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #3A3A3A;
+            margin-bottom: 40px;
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+
+
+        .pass {
+            max-width: 240px;
+            min-height: 49px;
+            padding: 15px 27px;
+            background: $colorRed;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: 0;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        .tickets {
+            max-width: 167px;
+            min-height: 49px;
+            padding: 5px;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: $colorRed;
+            border: 5px solid $colorRed; 
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

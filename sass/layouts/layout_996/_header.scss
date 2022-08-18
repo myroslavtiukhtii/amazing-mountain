@@ -1,0 +1,106 @@
+header {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+
+        nav {
+            min-height: 83px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .menu {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin-right: 60px;
+                }
+
+                .end {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+
+
+    .icon {
+        max-width: 178px;
+        max-height: 20px;
+    }
+
+
+    .weather {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+
+        .icon-weather {
+            max-width: 75px;
+            max-height: 83px;
+            background-color: $colorRed;
+            padding: 24px 11px;
+
+            .icon {
+                width: 51px;
+                height: 33px;
+            }
+        }
+        
+        .weather-list {
+            display: flex;
+            flex-direction: column;
+            max-height: 83px;
+            background-color: #0C0E36;
+            padding-top: 19px;
+            padding-right: 13px;
+            padding-left: 9px;
+
+            span {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 10px;
+                letter-spacing: 0.075em;
+                text-transform: uppercase;
+                color: #ffffffb3;
+                margin-bottom: 20px;
+            }
+
+
+            .celcius::after {
+                content: ' -6°C';
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: #FFFFFF;
+            }
+
+            .snowfall {
+                margin-bottom: 0;
+            }
+
+            .snowfall::after {
+                content: ' 35cm';
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: #FFFFFF;
+            }
+        }
+        
+    }
+
+
+}

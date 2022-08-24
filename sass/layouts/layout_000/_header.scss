@@ -6,11 +6,14 @@ header {
     .icon {
         max-width: 150px;
         max-height: 25px;
+        -webkit-animation: bounce-in-top 1.1s both;
+	    animation: bounce-in-top 1.1s both;
     }
 
     .weather {
         display: flex;
         flex-direction: row;
+
 
         .icon-weather svg {
             width: 51px;

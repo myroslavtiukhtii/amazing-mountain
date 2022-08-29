@@ -5,7 +5,7 @@ Home page of Ski company website.
 ___
 
 #### :link: Live Demo: 
-[IT-life](https://myroslavchik.github.io/amazing-mountain/)
+[amazing-mountain](https://myroslavchik.github.io/amazing-mountain/)
 
 [Design](The Free Library)
 ___
